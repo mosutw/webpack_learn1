@@ -1,15 +1,15 @@
 var path = require('path');
 
 var config = {
-    entry: ['webpack/hot/dev-server',path.resolve(__dirname, 'app/main.js')],
+    entry: ['./app/main.js'],
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: './build',
         filename: 'bundle.js'
     },
     module: {
         loaders: [{
-            test: /\.js$/,
-            loader: ['babel'],
+            test: /\.jsx$/,
+            loader: ['jsx-loader'],
             query:
    	    {
 		presets:['react']
